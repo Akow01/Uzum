@@ -46,20 +46,20 @@ const Navbar = () => {
             <p className="pl-5 font-semibold">{t("pick-up point")}</p>
           </div>
 
-          <div className=" ">
+          <div className="flex  ">
             <a
-              className="pr-2 text-purple-500 font-semibold border-r-2"
+              className="pr-2 text-purple-500 font-semibold border-r-2  hidden lg:flex"
               href=""
             >
               Стать продавцом
             </a>
-            <a className="pl-2 text-purple-500 font-semibold" href="">
+            <a className="pl-2 text-purple-500 font-semibold  hidden lg:flex" href="">
               Открыть пункт выдачи
             </a>
-            <a className="pl-4" href="">
+            <a className="pl-4  hidden lg:flex" href="">
               Вапрос-ответ
             </a>
-            <a className="pl-4" href="">
+            <a className="pl-4  hidden lg:flex" href="">
               Мои заказы
             </a>
             <button className="pl-4" onClick={changeLanguage}>
@@ -94,10 +94,10 @@ const Navbar = () => {
               to={"/auth"}
             >
               <VscAccount className="size-5" />
-              Войти
+              <span className="hidden lg:flex">Войти</span> 
             </Link>
             <Link
-              className="flex items-center gap-2 text-l hover:bg-gray-100 relative"
+              className=" items-center gap-2 text-l hover:bg-gray-100 relative hidden lg:flex "
               to={"/favorite"}
             >
               <IoMdHeartEmpty className="size-6" />
@@ -108,7 +108,7 @@ const Navbar = () => {
             </Link>
             <Link
               to={"/cart"}
-              className="flex items-center gap-2 text-lg hover:bg-gray-100 relative"
+              className=" items-center gap-2 text-lg hover:bg-gray-100 relative hidden lg:flex"
             >
               <MdOutlineShoppingBag className="size-5 " />
               Корзина
@@ -121,7 +121,7 @@ const Navbar = () => {
               onClick={() => setDarkMode(!darkMode)}
             >
               <BsMoonFill className="size-5 " />
-              Dark
+             <span className="hidden lg:flex">Dark</span> 
             </button>
           </div>
         </div>
@@ -129,13 +129,13 @@ const Navbar = () => {
         <div className="px-32 pt-5 flex items-center gap-[14px] dark:bg-dark dark:text-white">
           <a className="flex gap-1" href="">
             <img
-              className="w-[24px]"
+              className="w-[24px] hidden lg:flex"
               src="https://static.uzum.uz/fast_categories/every1.png"
               alt=""
             />
-            <p>Выгода каждый день </p>
+            <p className="hidden lg:flex">Выгода каждый день </p>
           </a>
-          <div className=" flex gap-[14px] text-gray-500">
+          <div className=" flex gap-[14px] text-gray-500 hidden lg:flex">
             <a href="">Электроника</a>
             <a href="">Бытовая техника</a>
             <a href="">Одежда</a>
